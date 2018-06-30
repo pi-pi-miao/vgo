@@ -36,7 +36,7 @@ func (c *Config) Float64(tag string) (float64, error) {
 	return strconv.ParseFloat(c.String(tag), 64)
 }
 
-func NewFileConf(filePath string) (*Config, error) {
+func ReadFile_Conf(filePath string) (*Config, error) {
 
 	cf := &Config{
 		conf: make(map[string]url.Values, 10),
