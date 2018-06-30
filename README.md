@@ -26,6 +26,18 @@
 
 <br>  
 
+
+
+Download and install    <br>  
+
+
+cd $gopath    <br>
+
+
+go get -d github.com/PyreneGitHub/vgo/...    <br>
+
+
+
 #### 获得更多帮助： <br>
 qq群：707362951 <br>  
 
@@ -125,3 +137,11 @@ func init(){
 }
 ```
 
+
+
+   <br>
+build    <br> 
+cd $gopath    <br>
+go build project/main    <br>  
+./main         <br>  
+     
