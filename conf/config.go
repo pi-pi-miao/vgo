@@ -6,26 +6,6 @@ import (
 	"github.com/jmoiron/sqlx"
 )
 
-func init() {
-	_ := RedisConf{
-		RedisAddr:        nil,
-		RedisMaxActive:   nil,
-		RedisIdleTimeout: nil,
-		RedisMaxIdle:     nil,
-	}
-	_ := MysqlConfig{
-		UserName: nil,
-		Passwd:   nil,
-		Host:     nil,
-		Port:     nil,
-		Database: nil,
-	}
-	_ := EtcdConf{
-		Addr:    nil,
-		Timeout: nil,
-	}
-}
-
 type (
 	Config struct {
 		MysqlConf  MysqlConfig
