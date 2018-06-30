@@ -91,6 +91,22 @@ project  <br>
   ----------------------------------  <br>
 
 
+
+* main.go
+
+```
+package main
+
+import(
+   "vgo/vgo"
+   _ "vgo/router"
+)
+
+func main(){
+   vgo.Run(":8080")
+}
+```
+
 * c.go
 
 ```
@@ -110,19 +126,7 @@ func T(w http.ResponseWriter, r *http.Request,c httprouter.Params) {
    fmt.Fprint(w, "Welcome!\n")
 }
 ```
-* main.go
-```
-package main
 
-import(
-   "vgo/vgo"
-   _ "vgo/router"
-)
-
-func main(){
-   vgo.Run(":8080")
-}
-```
 * router.go
 ```
 package router
