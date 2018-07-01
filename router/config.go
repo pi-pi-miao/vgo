@@ -1,8 +1,7 @@
 package router
 
-import(
+import (
 	"github.com/julienschmidt/httprouter"
 )
 
 var Router *httprouter.Router
-

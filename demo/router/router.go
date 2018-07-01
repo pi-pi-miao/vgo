@@ -1,10 +1,10 @@
 package router
 
-import(
-	"vgo/router"
-	"vgo/demo/controller"
+import (
+	"github.com/PyreneGitHub/vgo/demo/controller"
+	"github.com/PyreneGitHub/vgo/router"
 )
 
-func init(){
-	router.Router.GET("/",controller.T)
+func init() {
+	router.Router.GET("/", controller.T)
 }

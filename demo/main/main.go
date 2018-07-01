@@ -1,11 +1,11 @@
 package main
 
-import(
-	"vgo/vgo"
-	_ "vgo/router"
+import (
+	_ "github.com/PyreneGitHub/vgo/router"
+	"github.com/PyreneGitHub/vgo/vgo"
 )
 
-func main(){
+func main() {
 	ConfigAll()
 	vgo.Run(":8080")
 }

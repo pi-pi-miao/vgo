@@ -1,16 +1,15 @@
 package read_conf
 
-import(
+import (
 	"bufio"
 	"errors"
-	"os"
-	"strings"
-	"strconv"
 	"net/url"
+	"os"
+	"strconv"
+	"strings"
 )
 
-
-type Config struct{
+type Config struct {
 	conf map[string]url.Values
 }
 
@@ -28,7 +27,7 @@ func (c *Config) Int(tag string) (int, error) {
 	return strconv.Atoi(c.String(tag))
 }
 
-func(c *Config) Int64(tag string) (int64, error) {
+func (c *Config) Int64(tag string) (int64, error) {
 	return strconv.ParseInt(c.String(tag), 10, 64)
 }
 
@@ -68,10 +67,10 @@ func ReadFile_Conf(filePath string) (*Config, error) {
 		}
 
 		if idx := strings.Index(lstr, "["); idx != -1 {
-			if lstr[len(lstr) - 1:] != "]" {
+			if lstr[len(lstr)-1:] != "]" {
 				return nil, errors.New("Error:field to parse this symbol style:\"" + lstr + "\"")
 			}
-			tag = lstr[1:len(lstr) - 1]
+			tag = lstr[1 : len(lstr)-1]
 			cf.conf[tag] = url.Values{}
 		} else {
 			lstr = replacer.Replace(lstr)

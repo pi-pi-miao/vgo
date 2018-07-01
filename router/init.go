@@ -1,5 +1,5 @@
 package router
 
-func init(){
+func init() {
 	RouterMethod()
 }

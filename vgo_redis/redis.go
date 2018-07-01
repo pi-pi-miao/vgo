@@ -1,22 +1,23 @@
 package vgo_redis
 
-import(
-	"github.com/garyburd/redigo/redis"
-	"time"
+import (
 	"log"
-	"vgo/conf"
+	"time"
+
+	"github.com/PyreneGitHub/vgo/conf"
+	"github.com/garyburd/redigo/redis"
 )
 
-func init(){
-	err:=initRedis()
-	if err!=nil{
-		log.Println("init redis err",err)
+func init() {
+	err := initRedis()
+	if err != nil {
+		log.Println("init redis err", err)
 		return
 	}
 }
 
 func initRedis() (err error) {
-	Client:=&conf.Vgo_client{}
+	Client := &conf.Vgo_client{}
 	Client.RedisPool = &redis.Pool{
 		MaxIdle:     conf.RedisConf.RedisMaxIdle,
 		MaxActive:   conf.RedisConf.RedisMaxActive,
