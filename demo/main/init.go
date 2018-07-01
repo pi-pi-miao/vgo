@@ -2,7 +2,8 @@ package main
 
 import (
 	"log"
-	"vgo/conf"
+
+	"github.com/PyreneGitHub/vgo/conf"
 
 	"github.com/PyreneGitHub/vgo/read_conf"
 )
